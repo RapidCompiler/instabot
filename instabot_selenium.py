@@ -5,7 +5,7 @@ import time
 class Instabot:
     def __init__(self,user,pwd):
         self.username = user
-        self.driver = webdriver.Chrome(executable_path=r"E:\Code\idle\Projects\Instagram Bot\chromedriver.exe")
+        self.driver = webdriver.Chrome()
         self.driver.get("https://instagram.com")
         time.sleep(4)
         self.driver.find_element_by_xpath("//input[@name=\"username\"]").send_keys(user)
@@ -24,11 +24,17 @@ class Instabot:
         self.driver.find_element_by_xpath("//a[contains(@href,'/following')]").click()
         time.sleep(1)
         following = self.get_names()
-        print(len(following))
+
+        # Prints the number of accounts you follow
+        # print(len(following))
+
         self.driver.find_element_by_xpath("//a[contains(@href,'/followers')]").click()
         time.sleep(1)
         followers = self.get_names()
-        print(len(followers))
+        
+        # Prints the number of followers you have
+        # print(len(followers))
+
         fake_peeps = [user for user in following if user not in followers]
         for i in fake_peeps:
             print(i)
