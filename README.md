@@ -9,4 +9,5 @@ Points to note before executing the code -
 3. This code can only be run on an instagram account with **atleast** a decent number of follower and following accounts. (Minor changes have to be made for other accounts)
 4. Accounts with an unusually large number of followers/following accounts may take a while to execute. In this case, your patience is expected here.
 5. Issues may arise due to incompatibility with the chromedriver. In this case, please click this link and then download the required version.
+ https://www.selenium.dev/downloads/
 6. This program can also be run on other browsers, although chrome is recommended. For this, please download the required driver and include it in the \_\_init\_\_ function of the Instabot class (self.driver).
